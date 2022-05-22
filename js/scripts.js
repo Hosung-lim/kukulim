@@ -34,7 +34,7 @@ window.addEventListener('DOMContentLoaded', event => {
     if (mainNav) {
         new bootstrap.ScrollSpy(document.body, {
             target: '#mainNav',
-            offset: 40,
+            offset: 10,
         });
     };
 
