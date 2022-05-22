@@ -72,17 +72,28 @@
                                 <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
                             </div>
                             <!-- environment input-->
-                            <div class="form-floating">
-                                <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                                <option selected>사용 환경 선택</option>
-                                <option value="1">Windows</option>
-                                <option value="2">Mac</option>
-                                <option value="3">Android</option>
-                                <option value="4">iOS</option>
-                                <option value="5">기타</option>
-                              </select>
-                              <label for="floatingSelect">Works with selects</label>
+                            <div class="row g-2">
+                              <div class="col-md">
+                                <div class="form-floating">
+                                  <input type="email" class="form-control" id="floatingInputGrid" placeholder="name@example.com" value="mdo@example.com">
+                                  <label for="floatingInputGrid">Email address</label>
+                                </div>
+                              </div>
+                              <div class="col-md">
+                                <div class="form-floating">
+                                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                        <option selected>사용 환경 선택</option>
+                                        <option value="1">Windows</option>
+                                        <option value="2">Mac</option>
+                                        <option value="3">Android</option>
+                                        <option value="4">iOS</option>
+                                        <option value="5">기타</option>
+                                      </select>
+                                    <label for="floatingSelect">Works with selects</label>
+                                </div>
+                              </div>
                             </div>
+                            
                             <!-- Message input-->
                             <div class="form-floating mb-3">
                                 <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
