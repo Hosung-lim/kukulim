@@ -16,30 +16,30 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
 		
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-	<script type="text/javascript">
-		(function() {
-			// https://dashboard.emailjs.com/admin/account
-			emailjs.init('MDdbZaFxlDlx9ZvYV');
-		})();
-	</script>
-	<script type="text/javascript">
-		window.onload = function() {
-			// form id, #contact-form 안에 있는 것들 전송
-			document.getElementById('contact-form').addEventListener('submit', function(event) {
-				event.preventDefault();
-				// generate a five digit number for the contact_number variable
-				this.contact_number.value = Math.random() * 100000 | 0;
-				// 서비스 id, 이메일 템플릿
-				emailjs.sendForm('service_oycfs5e', 'template_s7eyj9v', this)
-					.then(function() {
-						console.log('SUCCESS!');
-					}, function(error) {
-						console.log('FAILED...', error);
-					});
-			});
-		}
-	</script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+		<script type="text/javascript">
+			(function() {
+				// https://dashboard.emailjs.com/admin/account
+				emailjs.init('MDdbZaFxlDlx9ZvYV');
+			})();
+		</script>
+		<script type="text/javascript">
+			window.onload = function() {
+				// form id, #contact-form 안에 있는 것들 전송
+				document.getElementById('contact').addEventListener('submit', function(event) {
+					event.preventDefault();
+					// generate a five digit number for the contact_number variable
+					this.contact_number.value = Math.random() * 100000 | 0;
+					// 서비스 id, 이메일 템플릿
+					emailjs.sendForm('service_oycfs5e', 'template_s7eyj9v', this)
+						.then(function() {
+							console.log('SUCCESS!');
+						}, function(error) {
+							console.log('FAILED...', error);
+						});
+				});
+			}
+		</script>
 		
     </head>
     <body id="page-top">
@@ -106,7 +106,7 @@
                                         <option value="4">iOS</option>
                                         <option value="5">기타</option>
                                     </select>
-                                    <label for="floatingSelect">사용자 환경을 선택하여 주세요.</label>
+                                    <label for="floatingSelect_environment">사용자 환경을 선택하여 주세요.</label>
                                 </div>
                               </div>
                               <div class="col-md">
@@ -119,7 +119,7 @@
                                         <option value="4">Samsung Internet</option>
                                         <option value="5">기타</option>
                                     </select>
-                                    <label for="floatingSelect">브라우저를 선택하여 주세요.</label>
+                                    <label for="floatingSelect_browser">브라우저를 선택하여 주세요.</label>
                                 </div>
                               </div>
                             </div>
@@ -154,23 +154,9 @@
                 </div>
             </div>
         </section>
-		
 	<form id="contact-form">
-		<!-- 아래 input은 보낼 시 꼭 필요함 -->
-		<input type="hidden" name="contact_number">
-
-		<label>Name</label>
-		<input type="text" name="to_name">
-
-		<label>From Name</label>
-		<input type="text" name="from_name">
-
-		<label>Message</label>
-		<textarea name="contact"></textarea>
-
-		<input type="submit" value="Send">
-    	</form>
-	    
+	  <input type="submit" value="Send">
+	</form>	
         <!-- Copyright Section-->
         <div class="copyright py-4 text-center text-white">
             <div class="container"><small>Copyright &copy; Coloso </small></div>
