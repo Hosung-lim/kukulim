@@ -100,11 +100,11 @@
 				<div class="form-floating mb-3">
 				    <select class="form-select mb-3" name="floatingSelect_environment" id="floatingSelect_environment" aria-label="Floating label select example">
 					<option selected>사용 환경 선택</option>
-					<option value="1">Windows</option>
-					<option value="2">Mac</option>
-					<option value="3">Android</option>
-					<option value="4">iOS</option>
-					<option value="5">기타</option>
+					<option value="Windows">Windows</option>
+					<option value="Mac">Mac</option>
+					<option value="Android">Android</option>
+					<option value="iOS">iOS</option>
+					<option value="기타">기타</option>
 				    </select>
 				    <label for="floatingSelect_environment">사용자 환경을 선택하여 주세요.</label>
 				</div>
@@ -125,6 +125,10 @@
 			    </div>
 
 			    <!-- Message input-->
+			    <div class="form-floating mb-3">
+				<textarea class="form-control" id="message_lecture" name="message_lecture" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+				<label for="message_lecture">시청 강의</label>
+				<div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
 			    <div class="form-floating mb-3">
 				<textarea class="form-control" id="message" name="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
 				<label for="message">Message</label>
